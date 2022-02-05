@@ -1,0 +1,123 @@
+/* nháp */
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+li
+{
+	list-style: none;
+}
+a:link,a:active,a:visited
+{
+	text-decoration: none;
+}
+@font-face
+{
+	font-family: 
+}
+/*basic classes*/ 
+.wrap-outer
+{
+	max-width: 1404px; /*kích thước đúng
+	với thiết kế kích thước 
+	giới hạn tối đa */
+	margin-right:auto; /* để auto 
+	để tự căn vào giữa */
+	margin-left:auto;
+}
+.wrap-inner
+{
+	max-width: 1172px;
+	margin: 0px auto;
+}
+.btn /* chung nên đặt lên phía trên */
+{
+	display: inline-block; /* để có thể chỉnh kích thước vừa không xuống dòng */
+	margin-top: 105px;
+	background-color: #2870db; 
+	height: 80px;
+	line-height: 80px; /* hiegth = line-height để cho chữ vào giữa theo chiều dọc */
+	color: #fbfcfc;
+	border-radius: 40px; /* bo lại */
+	width: 239px;
+	text-align: center; /* chữ vào giữa theo chiều ngang */
+	padding: 0px 80px;
+	box-shadow: 0px 22px 24px rgba(17,83,165,0.21); 
+	/*vị trí của bóng 0px hai bên 22px trên dưới 24 kích thước độ tỏa , màu sắc có độ đậm nhạt thì phải lấy 
+	màu rgba , kinh nghiệm là cứ code ra bộ 3 số đó và rgba sau đó điều chỉnh vị trí sau nếu không nhớ thứ tự */ 
+}
+.btn:hover
+{
+	background-color: #2164c7; /* lúc nào nút bấm cũng phải được hover thì phải có hover để người dùng biết */
+	/* nếu tối hơn so với nền thì ta cho tối nữa , còn sáng hơn so với nền thì ta cho sáng nữa */ 
+}
+/* header*/
+header
+{
+	height: 1030px; /* Cần đặt chiều cao cụ thể để ảnh không bị lệch ra bên ngoài */
+	/* đặt chiều cao thấp lui để hai ảnh bg gần nhau */
+	background-color:white;
+	background-image: url(imgpng/trai.png),url(imgpng/phai.png); /*để nền là hai ảnh đó*/ 
+	background-repeat: no-repeat,no-repeat; /* để chỉ hiện thị hai ảnh đã cho ở trên
+	xóa dòng này đi sẽ xuất hiện nhiều ảnh*/
+	background-position: left bottom,right top;
+	/*background-position là vị trí ảnh tương ứng so với vị trí của background-image*/
+	background-size: 173px,1105px; /* chỉnh cho hai ảnh nhỏ lại */
+	padding: 85px 16px; /*để cho background không bị dịch đi , nếu để margin thì bị dịch đi*/
+}
+header #top 
+{
+	display: flex; /* làm cho các thẻ trong div nằm cùng một hàng */
+	justify-content: space-between; /* các thẻ cách nhau bởi khoảng trắng và giồn ra cùng hai bên*/ 
+}
+#top ul li
+{
+	display: inline; /* lên cùng một hàng như chữ vậy*/ 
+}
+header #top ul li a
+{
+	display: inline-block; /* để có thể vừa nằm trên cùng một hàng và vừa chỉnh được kích thước */
+	color: white;
+	height: 36px;
+	line-height: 36px;
+	padding: 0px 36px;
+	font-size: 18px;
+	font-family:OpenSans,sans-serif;
+	font-weight: 400; /* font có độ đạm nhạt rồi nhưng đặt lại cho chắc độ đậm nhạt */
+}
+header #top ul li a.highlight
+{
+	background-color: white;
+	color: #14215e;
+	border-radius: 18px;
+}
+#jumbostron h1
+{
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: bold; /* in đậm */
+	color: #14215e;
+	font-family: OpenSans,sans-serif;
+	margin-top: 149px;
+	max-width: 405px;
+	margin-left: 100px;
+
+}
+#jumbostron h2
+{
+	font-size: 18px;
+	line-height: 40px;
+	/*color: #2d2058  vì có độ đậm nhạt nữa nên phải dùng màu rgba() */
+	color: rgba(35,45,32,0.65); /* lấy từ (H-S-B-R-G-B) thì 35 45 32 lấy tương ứng từ B-R-G còn độ đậm nhạt 0.65 hay 65%
+	lấy từ opacity ở thanh công cụ bên phải */  
+	font-weight:400;
+	margin-top: 32px;
+	max-width: 405px;
+	margin-left: 100px;
+}
+header h1
+{
+	margin-left: 108px;
+}
